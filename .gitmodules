@@ -1,3 +1,0 @@
-[submodule "Pytorch-YOLOv3"]
-	path = Pytorch-YOLOv3
-	url = https://github.com/eriklindernoren/PyTorch-YOLOv3
