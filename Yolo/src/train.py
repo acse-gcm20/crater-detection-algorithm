@@ -14,7 +14,7 @@ from models import load_model
 from utils.logger import Logger
 from utils.utils import to_cpu, load_classes, print_environment_info, provide_determinism, worker_seed_set
 from utils.datasets import ListDataset
-from utils.augmentations import AUGMENTATION_TRANSFORMS
+# from utils.augmentations import AUGMENTATION_TRANSFORMS
 # from utils.transforms import DEFAULT_TRANSFORMS
 from utils.parse_config import parse_data_config
 from utils.loss import compute_loss
@@ -44,8 +44,7 @@ def _create_data_loader(img_path, batch_size, img_size, n_cpu, multiscale_traini
     dataset = ListDataset(
         img_path,
         img_size=img_size,
-        multiscale=multiscale_training,
-        transform=AUGMENTATION_TRANSFORMS)
+        multiscale=multiscale_training)
     dataloader = DataLoader(
         dataset,
         batch_size=batch_size,
