@@ -80,7 +80,7 @@ class AbsoluteLabels(object):
 class PadSquare(ImgAug):
     def __init__(self, ):
         self.augmentations = iaa.Sequential([
-            iaa.PadToAspectRatio(
+            iaa.size.PadToAspectRatio(
                 1.0,
                 position="center-center").to_deterministic()
         ])
